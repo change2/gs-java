@@ -8,7 +8,7 @@ function copy(src, dst) {
   console.timeEnd("read-big");
 }
 
-function copyBig(src,dst){
+function copyBig(src, dst) {
   console.time("copy-big");
   fs.createReadStream(src).pipe(fs.createWriteStream(dst));
   console.timeEnd("copy-big");
@@ -19,7 +19,7 @@ function main(argv) {
   copyBig(argv[0], argv[1]);
 }
 
-main(process.argv.slice(2));
+//main(process.argv.slice(2));
 
 function read(path, options) {
   fs.readFile(path, options, function (err, data) {
@@ -51,16 +51,16 @@ function watch(path) {
 }
 
 function testFileSystem() {
-  fs.exists("C:/tmp/111", function (exists) {
+  fs.exists("C:/tools/code/gs-java/tmp/2.txt", function (exists) {
     util.debug(exists ? "It\' is exists" : " not exists");
   });
 
-  fs.stat("C:/tmp/1.txt", function (err, stats) {
+  fs.stat("C:/tools/code/gs-java/tmp/2.txt", function (err, stats) {
     if (err) throw err;
     console.log(stats.isFile());
-    console.log( stats.isDirectory());
-    console.log( stats.isSocket());
-    console.log( stats.isFIFO());
+    console.log(stats.isDirectory());
+    console.log(stats.isSocket());
+    console.log(stats.isFIFO());
     console.log(util.inspect(stats));
   });
 
@@ -69,7 +69,7 @@ function testFileSystem() {
   //  console.log("It\' is create success!");
   //});
 }
-var path = "C:/tmp/1.txt";
+var path = "C:/tools/code/gs-java/tmp/2.txt";
 //watch(path);
 //javascript只支持UTF-8，如果要支持GBK ，需要下载额外例如：IconV包的支持
 write(path, "你好，赞赏", {encoding: "utf-8"});

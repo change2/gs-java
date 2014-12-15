@@ -5,16 +5,20 @@
  */
 
 var fs = require("fs");
-
+var z = require("zlib");
 var rs = fs.createReadStream("c:/tmp/1.txt");
 var ws = fs.createWriteStream("c:/tmp/2.out");
+var w = fs.createWriteStream("c:/tmp/1.txt.gz");
+var gzip = z.createGzip();
 //有数据传递的时候触发, chunk data string
-//rs.setEncoding("utf8");
+rs.setEncoding("utf8");
 rs.on("data", function (chunk) {
   rs.pause();
   doSomething(chunk);
   ws.write(chunk);
 });
+//先留到zlib，然后再输出流
+rs.pipe(gzip).pipe(w);
 var count = 0;
 
 //once the buffer is drained ，the readable event will fire again when more data is available
