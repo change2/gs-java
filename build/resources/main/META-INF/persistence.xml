@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+  <persistence-unit name="NewPersistenceUnit">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.shclearing.model.Balanceofcashdepositaccount</class>
+    <class>com.shclearing.model.Cashdepositaccountdetail</class>
+    <class>com.shclearing.model.Fxbiagenyrelation</class>
+    <class>com.shclearing.model.Fxbimember</class>
+    <class>com.shclearing.model.Importdatalog</class>
+    <class>com.shclearing.model.Irsagenyrelation</class>
+    <class>com.shclearing.model.Irsbill</class>
+    <class>com.shclearing.model.Irsmember</class>
+    <class>com.shclearing.model.Marginrequireadddetail</class>
+    <class>com.shclearing.model.Marginrequirement</class>
+    <class>com.shclearing.model.Netamount</class>
+    <class>com.shclearing.model.Tadminuser</class>
+    <class>com.shclearing.model.TadminuserTrole</class>
+    <class>com.shclearing.model.Texchangeroleapply</class>
+    <class>com.shclearing.model.Tirsroleapply</class>
+    <class>com.shclearing.model.Tnetuser</class>
+    <class>com.shclearing.model.TnetuserTrole</class>
+    <class>com.shclearing.model.Tresource</class>
+    <class>com.shclearing.model.Trole</class>
+    <class>com.shclearing.model.Troleapply</class>
+    <class>com.shclearing.model.TroleapplyLog</class>
+    <class>com.shclearing.model.TroleTresource</class>
+    <properties>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@//172.16.202.57:1521/schdb"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+      <property name="hibernate.connection.username"/>
+      <property name="hibernate.connection.password"/>
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2356891496">
+    <data-source source="LOCAL" name="Oracle - schdb@172.16.202.57" uuid="ee9dc605-dd05-4065-9b86-15e16fec89ab">
+      <driver-ref>oracle</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//172.16.202.57:1521/schdb</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

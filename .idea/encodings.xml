@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/node_modules/iconv-lite/lib/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/2.txt" charset="GBK" />
+    <file url="file://D:/work/shclearing/source/ZHU/DataExchange2008/DataExchange2008/src/com/trs/help/AdFilesHelper.java" charset="UTF-8" />
+    <file url="file://D:/work/shclearing/source/ZHU/DataExchange2008/DataExchange2008/src/com/trs/web2frame/WCMServiceCaller.java" charset="UTF-8" />
+    <file url="file://D:/work/shclearing/source/ZHU/DataExchange2008/DataExchange2008/src/com/trs/web2frame/dispatch/Dispatch.java" charset="UTF-8" />
+    <file url="file://D:/work/shclearing/source/ZHU/DataExchange2008/DataExchange2008/src/com/trs/web2frame/entity/WAppendix.java" charset="UTF-8" />
+  </component>
+</project>
