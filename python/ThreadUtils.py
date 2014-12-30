@@ -2,6 +2,7 @@ __author__ = 'changejava'
 import time
 import random
 import os
+import sys
 
 time.sleep(5 * random.random())
 
@@ -15,3 +16,5 @@ for item in l:
 l = filter(lambda y: y.endswith('.html'), os.listdir('c:/'))
 for item in l:
     print(item)
+
+sys.exit(0)

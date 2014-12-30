@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="Gradle : gs-java : gs-java-1.0.war">
+  <artifact type="war" build-on-make="true" name="Gradle : gs-java : gs-java-1.0.war">
     <output-path>$PROJECT_DIR$/out/artifacts/gs-java</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$" />

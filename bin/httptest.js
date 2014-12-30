@@ -4,11 +4,33 @@
  * Time: 14:35
  */
 var http = require("http");
+var zlib = require("zlib");
+var url = require("url");
 
-var httpServer = http.createServer(function (request, response) {
-  var buffer = "Hello World \n";
-  response.writeHead(200, {'Content-Type': 'text-plain', 'Content-length': buffer.length, 'username': 'changejava'});
-  response.end(buffer);
-});
-httpServer.listen(8124);
+http.createServer(function (request, response) {
+  console.log(request.url);
+  console.log(url.parse(request.url))
+  console.log(request.method);
+  console.log(request.headers);
+  var i = 513,
+    data = '';
 
+  while (i--) {
+    data += '.';
+  }
+
+  if ((request.headers['accept-encoding'] || '').indexOf('gzip') !== -1) {
+    zlib.gzip(data, function (err, data) {
+      response.writeHead(200, {
+        'Content-Type': 'text/plain',
+        'Content-Encoding': 'gzip'
+      });
+      response.end(data);
+    });
+  } else {
+    response.writeHead(200, {
+      'Content-Type': 'text/plain'
+    });
+    response.end(data);
+  }
+}).listen(8124);
