@@ -20,6 +20,10 @@ public class MainController {
 
   Logger logger = LoggerFactory.getLogger(MainController.class);
 
+  public MainController() {
+    System.out.println("=========================");
+  }
+
   @RequestMapping(value = "/test", method = RequestMethod.POST)
   public void main(HttpServletRequest request, HttpServletResponse response) {
     logger.info("logger:{}", request.getParameter("main"));

@@ -14,7 +14,7 @@
     window.location.href = "http://www.bing.com"
   }
   //  document.body.onload = myHandler();
-  window.onload = myHandler();
+  //  window.onload = myHandler();
 </script>
 <style type="text/css">
   table {
