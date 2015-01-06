@@ -1,28 +1,36 @@
 package com.shclearing.core.netty;
 
+import com.shclearing.core.netty.pojo.UnixTime;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-
-import java.util.Date;
-
 /**
  * User: changejava
  * Date: 2015/1/4
  * Time: 13:43
  */
 public class TimeClientHandler extends ChannelHandlerAdapter {
-
+//  private ByteBuf buf;
+//
+//  @Override
+//  public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+//    buf = ctx.alloc().buffer(6);
+//  }
+//
+//  @Override
+//  public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+//    buf.release();
+//    buf = null;
+//  }
 
   @Override
   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-    ByteBuf buf = (ByteBuf) msg;
+    UnixTime m = (UnixTime) msg;
     try {
-      long currentTimeMillis = (buf.readInt()) * 1000L;
-      System.out.println(new Date(currentTimeMillis));
-      ctx.close();
+        System.out.println(m.toString());
+        ctx.close();
     } finally {
-      buf.release();
+
     }
 
   }

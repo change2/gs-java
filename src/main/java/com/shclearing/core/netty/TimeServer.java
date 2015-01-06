@@ -1,5 +1,6 @@
 package com.shclearing.core.netty;
 
+import com.shclearing.core.netty.decoder.TimeEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -14,11 +15,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * Date: 2014/12/31
  * Time: 17:22
  */
-public class DiscardServer {
+public class TimeServer {
 
   private int port;
 
-  public DiscardServer(int port) {
+  public TimeServer(int port) {
     this.port = port;
   }
 
@@ -30,15 +31,15 @@ public class DiscardServer {
       port = 8080;
     }
 
-    DiscardServer server = new DiscardServer(port);
+    TimeServer server = new TimeServer(port);
     server.run();
 
 
   }
 
   public void run() throws InterruptedException {
-    EventLoopGroup bossGroup = new NioEventLoopGroup();
-    EventLoopGroup workGroup = new NioEventLoopGroup();
+    EventLoopGroup bossGroup = new NioEventLoopGroup(20);
+    EventLoopGroup workGroup = new NioEventLoopGroup(20);
     try {
       ServerBootstrap b = new ServerBootstrap();
       b.group(bossGroup, workGroup)
@@ -46,11 +47,13 @@ public class DiscardServer {
         .childHandler(new ChannelInitializer<SocketChannel>() {
           @Override
           protected void initChannel(SocketChannel ch) throws Exception {
-            ch.pipeline().addLast(new DiscardServerHandler(), new TimeServerHandler());
+            ch.pipeline().addLast(new TimeEncoder(), new TimeServerHandler());
           }
         })
         .option(ChannelOption.SO_BACKLOG, 128)
-        .childOption(ChannelOption.SO_KEEPALIVE, true);
+        .option(ChannelOption.SO_TIMEOUT,2000)
+        .childOption(ChannelOption.SO_KEEPALIVE, true)
+        .childOption(ChannelOption.TCP_NODELAY,true);
 
       ChannelFuture f = b.bind(port).sync();
       f.channel().closeFuture().sync();

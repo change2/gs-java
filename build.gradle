@@ -3,13 +3,12 @@ apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'groovy'
 apply plugin: 'idea'
-
 version = '1.0'
 repositories {
   mavenLocal()
   mavenCentral()
-  maven { url "http://repo.spring.io/libs-release" }
-  maven { url "http://nexus.bsdn.org/content/groups/public/" }
+//  maven { url "http://repo.spring.io/libs-release" }
+//  maven { url "http://nexus.bsdn.org/content/groups/public/" }
 //  maven {url "http://maven.oschina.net/content/groups/public"}
 }
 

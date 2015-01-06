@@ -1,5 +1,6 @@
 package com.shclearing.core.netty;
 
+import com.shclearing.core.netty.decoder.TimeDecoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -35,7 +36,7 @@ public class TimeClient {
     bootstrap.handler(new ChannelInitializer<NioSocketChannel>() {
       @Override
       protected void initChannel(NioSocketChannel ch) throws Exception {
-        ch.pipeline().addLast(new TimeClientHandler());
+        ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
       }
     });
 
