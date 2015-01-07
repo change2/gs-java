@@ -9,6 +9,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * User: changejava
  * Date: 2015/1/7
  * Time: 12:50
+ * 对象 序列化到byte中
  */
 public class MessageTimeDecoder extends MessageToByteEncoder<UnixTime> {
 
