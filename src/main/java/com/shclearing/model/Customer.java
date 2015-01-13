@@ -3,6 +3,7 @@ package com.shclearing.model;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
 
+
 /**
  * User: changejava
  * Date: 2015/1/6

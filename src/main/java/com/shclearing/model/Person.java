@@ -1,10 +1,10 @@
 package com.shclearing.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 /**
  * User: changejava
@@ -22,8 +22,6 @@ public class Person {
 
   private String description;
 
-  @Range(min = 1, max = 200)
-  private int age;
 
   public Long getId() {
     return id;
@@ -49,6 +47,7 @@ public class Person {
     this.description = description;
   }
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
@@ -56,18 +55,18 @@ public class Person {
 
     Person person = (Person) o;
 
-    if (!description.equals(person.description)) return false;
-    if (!id.equals(person.id)) return false;
-    if (!name.equals(person.name)) return false;
+    if (description != null ? !description.equals(person.description) : person.description != null) return false;
+    if (id != null ? !id.equals(person.id) : person.id != null) return false;
+    if (name != null ? !name.equals(person.name) : person.name != null) return false;
 
     return true;
   }
 
   @Override
   public int hashCode() {
-    int result = id.hashCode();
-    result = 31 * result + name.hashCode();
-    result = 31 * result + description.hashCode();
+    int result = id != null ? id.hashCode() : 0;
+    result = 31 * result + (name != null ? name.hashCode() : 0);
+    result = 31 * result + (description != null ? description.hashCode() : 0);
     return result;
   }
 
