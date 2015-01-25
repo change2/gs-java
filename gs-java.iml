@@ -37,6 +37,9 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Python" name="Python">
+      <configuration sdkName="Python 2.5.4 " />
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <output url="file://$MODULE_DIR$/build/classes/main" />
@@ -87,5 +90,6 @@
     <orderEntry type="library" exported="" name="Gradle: cglib:cglib:2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: asm:asm:3.3.1" level="project" />
+    <orderEntry type="library" name="Python 2.5.4  interpreter library" level="application" />
   </component>
 </module>
