@@ -18,8 +18,8 @@ public class TimeEncoder extends ChannelHandlerAdapter {
   public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
     UnixTime unixTime = (UnixTime) msg;
     ByteBuf buf = ctx.alloc().buffer(6);
-    buf.writeInt((int) (System.currentTimeMillis()/1000L));
+    buf.writeInt((int) (System.currentTimeMillis() / 1000L));
     buf.writeBytes(unixTime.getReserve().getBytes());
-    ctx.write(buf,promise);
+    ctx.write(buf, promise);
   }
 }

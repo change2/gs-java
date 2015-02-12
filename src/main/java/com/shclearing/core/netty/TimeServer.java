@@ -51,9 +51,9 @@ public class TimeServer {
           }
         })
         .option(ChannelOption.SO_BACKLOG, 128)
-        .option(ChannelOption.SO_TIMEOUT,2000)
+        .option(ChannelOption.SO_TIMEOUT, 2000)
         .childOption(ChannelOption.SO_KEEPALIVE, true)
-        .childOption(ChannelOption.TCP_NODELAY,true);
+        .childOption(ChannelOption.TCP_NODELAY, true);
 
       ChannelFuture f = b.bind(port).sync();
       f.channel().closeFuture().sync();

@@ -6,8 +6,6 @@ import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
 
-import java.net.InetSocketAddress;
-import java.net.SocketAddress;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -43,7 +41,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
     ChannelFuture f = ctx.writeAndFlush(new UnixTime((int) (System.currentTimeMillis() / 1000L), "ha"));
 //    f.addListener(ChannelFutureListener.CLOSE);
     clientCount.incrementAndGet();
-    if(clientCount.intValue() % 1000 ==0){
+    if (clientCount.intValue() % 1000 == 0) {
       System.out.printf("在线人数 %d\n", clientCount.intValue());
       System.out.flush();
     }

@@ -1,9 +1,9 @@
 package com.shclearing.core.netty;
 
 import com.shclearing.core.netty.pojo.UnixTime;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+
 /**
  * User: changejava
  * Date: 2015/1/4
@@ -27,8 +27,8 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
     UnixTime m = (UnixTime) msg;
     try {
-        System.out.println(m.toString());
-        ctx.close();
+      System.out.println(m.toString());
+      ctx.close();
     } finally {
 
     }

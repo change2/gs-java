@@ -21,6 +21,6 @@ public class TimeDecoder extends ByteToMessageDecoder {
     if (in.readableBytes() < 6) {
       return;
     }
-    out.add(new UnixTime(in.readInt(),new String(new byte[]{in.readByte(),in.readByte()})));
+    out.add(new UnixTime(in.readInt(), new String(new byte[]{in.readByte(), in.readByte()})));
   }
 }

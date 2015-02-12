@@ -36,7 +36,7 @@ public class TimeClient {
     bootstrap.handler(new ChannelInitializer<NioSocketChannel>() {
       @Override
       protected void initChannel(NioSocketChannel ch) throws Exception {
-        ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
+        ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
       }
     });
 
