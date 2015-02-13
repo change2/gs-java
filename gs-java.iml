@@ -6,7 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="myPU" />
+          <factory-entry name="jcg-JPA" value="b9af3ac6-3a2d-4e79-8e57-a56cae2d0125" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
@@ -63,7 +63,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: org.apache.commons:commons-lang3:3.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: mysql:mysql-connector-java:5.1.34" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.slf4j:slf4j-api:1.7.7" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.slf4j:slf4j-log4j12:1.7.6" level="project" />
     <orderEntry type="library" exported="" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: log4j:log4j:1.2.17" level="project" />
@@ -90,14 +89,6 @@
     <orderEntry type="library" exported="" name="Gradle: xml-resolver:xml-resolver:1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: javax.xml.stream:stax-api:1.0-2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-web:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-context:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-core:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-beans:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aop:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-expression:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-asm:3.0.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.apache.cxf:cxf-rt-frontend-jaxws:2.3.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.apache.cxf:cxf-rt-transports-http:2.3.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.apache.cxf:cxf-rt-transports-http-jetty:2.3.5" level="project" />
@@ -133,6 +124,20 @@
     <orderEntry type="library" exported="" name="Gradle: net.glxn.qrgen:core:2.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.jfree:jfreesvg:2.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.google.zxing:core:3.1.0" level="project" />
-    <orderEntry type="library" name="gs-java node_modules" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.hibernate:hibernate-entitymanager:4.3.7.Final" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-web:4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-webmvc:4.0.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.mongodb:mongo-java-driver:2.13.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework.data:spring-data-mongodb:1.6.2.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-tx:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework.data:spring-data-commons:1.9.2.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.10" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.slf4j:slf4j-api:1.7.10" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-context:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-beans:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-core:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-expression:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aop:4.0.9.RELEASE" level="project" />
   </component>
 </module>
