@@ -33,13 +33,10 @@ public class IntegerTest {
       System.out.println((Integer) i);
     }
 
-    Object o1 = true ? new Integer(1) : new Double(2.01);
+    Object o1 = new Integer(1);
     System.out.println(o1);
     Object o2;
-    if (true)
-      o2 = new Integer(1);
-    else
-      o2 = new Double(2.0);
+    o2 = new Integer(1);
     System.out.println(o2);
     Integer i = new Integer(1);
     if (i.equals(1)) {

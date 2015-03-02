@@ -30,8 +30,8 @@ public class PersonResource extends Application {
     return ((Long) query.getSingleResult()).intValue();
   }
 
-  public List<Person> findPersons(int startPosition, int maxResult, String sortFields, String sortDirections) {
-    Query query = entityManager.createQuery("select p from Person  as p order by " + sortFields + " " + sortDirections);
+  public List findPersons(int startPosition, int maxResult, String sortFields, String sortDirections) {
+    Query query = entityManager.createQuery("select p from Person  as p order by " + sortFields + " " + sortDirections, Person.class);
     query.setFirstResult(startPosition);
     query.setMaxResults(maxResult);
     return query.getResultList();

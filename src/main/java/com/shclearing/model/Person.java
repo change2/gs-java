@@ -57,9 +57,8 @@ public class Person {
 
     if (description != null ? !description.equals(person.description) : person.description != null) return false;
     if (id != null ? !id.equals(person.id) : person.id != null) return false;
-    if (name != null ? !name.equals(person.name) : person.name != null) return false;
+    return !(name != null ? !name.equals(person.name) : person.name != null);
 
-    return true;
   }
 
   @Override

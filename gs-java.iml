@@ -7,6 +7,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="jcg-JPA" value="b9af3ac6-3a2d-4e79-8e57-a56cae2d0125" />
+          <factory-entry name="myPU" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
@@ -14,15 +15,16 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/application-rmi.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/application-rmiclient.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/application.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/mvc-dispatcher-servlet.xml</file>
         </fileset>
         <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/shclearing/config/AppConfig.java</file>
-        </fileset>
-        <fileset id="fileset3" name="Spring Application Context (3)" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/application-rmi.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/application-rmiclient.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/shclearing/config/AppConfigMongoDB.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/shclearing/config/AppConfigTest.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/shclearing/config/MongoService.java</file>
         </fileset>
       </configuration>
     </facet>
@@ -139,5 +141,6 @@
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-core:4.0.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-expression:4.0.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aop:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" name="gs-java node_modules" level="project" />
   </component>
 </module>

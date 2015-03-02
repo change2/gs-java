@@ -18,7 +18,7 @@ public class JPADemo {
     EntityManagerFactory factory = Persistence.createEntityManagerFactory("myPU");
     EntityManager em = factory.createEntityManager();
 
-    Query query = em.createNativeQuery("Select employee_id, employee_name from employee", Employee.class);
+    Query query = em.createNativeQuery("SELECT employee_id, employee_name FROM employee", Employee.class);
     List list = query.getResultList();
     System.out.println(list);
     System.exit(0);

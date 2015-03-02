@@ -26,12 +26,8 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
   @Override
   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
     UnixTime m = (UnixTime) msg;
-    try {
-      System.out.println(m.toString());
-      ctx.close();
-    } finally {
-
-    }
+    System.out.println(m.toString());
+    ctx.close();
 
   }
 
