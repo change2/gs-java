@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>购物车</title>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    a {
+      color: #333;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    body {
+      background: #f5f5f5;
+      font-size: 12px;
+      font-family: "微软雅黑";
+      color: #666;
+    }
+
+    .top {
+      width: 100%;
+      height: 270px;
+      background: #921dff;
+      text-align: center;
+    }
+
+    .logtxt {
+      width: 960px;
+      margin: 20px auto;
+    }
+
+    .logtxt .logtitle {
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    .car {
+      width: 960px;
+      height: 300px;
+      margin: 20px auto;
+      overflow-y: scroll;
+      OVERFLOW-x: hidden;
+    }
+
+    .car .c_title span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .car .c_ul {
+      width: 960px;
+      height: 200px;
+      margin-top: 20px;
+    }
+
+    .car .c_ul li {
+      list-style: none;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .car .c_ul .u_desc {
+      background: #D5D5D5;
+    }
+
+    .car .c_ul li span {
+      width: 166px;
+      height: 50px;
+      display: block;
+      float: left;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .car .c_ul .u_desc {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .car .c_ul .u_desc .u_name {
+      width: 460px;
+    }
+
+    .car .c_ul .list span {
+      display: block;
+    }
+
+    .car .c_ul .list .l_info {
+      width: 460px;
+    }
+
+    .car .c_ul .list span a {
+      float: left;
+      text-decoration: none;
+    }
+
+    .car .c_ul .list .l_info .l_title {
+      margin-left: 20px;
+    }
+
+    .car_summary {
+      width: 960px;
+      height: 50px;
+      margin: 20px auto;
+    }
+
+    .car_summary .c_title span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .car_summary .c_ul {
+      width: 960px;
+      height: 200px;
+      margin-top: 20px;
+    }
+
+    .car_summary .c_ul li {
+      list-style: none;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .car_summary .c_ul .u_desc {
+      background: #D5D5D5;
+    }
+
+    .car_summary .c_ul li span {
+      width: 166px;
+      height: 50px;
+      display: block;
+      float: left;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .car_summary .c_ul .u_desc {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .car_summary .c_ul .u_desc .u_name {
+      width: 460px;
+    }
+
+    .btn-orange {
+      width: 130px;
+      line-height: 50px;
+      border-radius: 0;
+      text-shadow: none;
+    }
+
+    .btn-orange:hover {
+      background-color: #ff5f29;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .btn-orange {
+      background-color: #ff7a4d;
+      font-size: 18px;
+      color: #FFF;
+      text-shadow: 1px 1px #c24000;
+      cursor: pointer;
+    }
+
+    .remove_cls {
+      cursor: pointer;
+    }
+
+    .shop {
+      width: 960px;
+      height: 600px;
+      margin: 10px auto;
+      /*overflow-y: scroll;*/
+      /*OVERFLOW-x: hidden;*/
+    }
+
+    .shop h1 {
+      font-size: 22px
+    }
+
+    .shop .s_ul {
+      width: 960px;
+      margin-top: 20px;
+    }
+
+    .shop .s_ul li {
+      list-style: none;
+      background: #ffffff;
+      float: left;
+      margin: 0 30px 30px 10px;
+    }
+
+    .shop .s_ul li p {
+      width: 400px;
+      height: 30px;
+      line-height: 30px;
+      list-style: none;
+    }
+
+    .b5m-price {
+      color: #ed145b;
+      font-size: 21px;
+    }
+
+    .origin-price {
+      /*margin-left: 10px;*/
+      font-size: 16px;
+      color: #666;
+      float: right;
+    }
+
+    .shop .s_ul li .add {
+      width: 400px;
+      height: 38px;
+      display: block;
+      background: #c40000;
+      text-align: center;
+      line-height: 38px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+<div class="top">
+  <img src="images/time.jpg" alt="双十一活动" width="990" height="270">
+</div>
+<div class="logtxt">
+  <p class="logtitle">
+    <span>我的购物车</span>现在<a href="javascript:void(0);" class="logtitle">登录</a>您购物车的商品永久保存
+  </p>
+</div>
+<div class="car">
+  <ul class="c_ul">
+    <li class="u_desc">
+      <span class="u_name">商品</span>
+      <span>帮我买价格</span>
+      <span>是否有货</span>
+      <span>操作</span>
+    </li>
+
+    <li class="list">
+      <span class="l_info">
+        <a href="#"><img src="images/1.jpg" alt="商品" width="58" height="58"></a>
+        <a href="#" class="l_title">QRTECH麦本本 小麦2QRTECH麦本本 小麦2QRTECH麦本本 小麦2 </a>
+      </span>
+      <span>228￥</span>
+      <span>有货</span>
+      <span class="remove_cls">删除</span>
+    </li>
+
+    <li class="list">
+      <span class="l_info">
+        <a href="#"><img src="images/2.jpg" alt="商品" width="58" height="58"></a>
+        <a href="#" class="l_title">QRTECH麦本本 小麦2QRTECH麦本本 小麦2QRTECH麦本本 小麦2 </a>
+      </span>
+      <span>228￥</span>
+      <span>有货</span>
+      <span class="remove_cls">删除</span>
+    </li>
+
+    <li class="list">
+      <span class="l_info">
+        <a href="#"><img src="images/3.jpg" alt="商品" width="58" height="58"></a>
+        <a href="#" class="l_title">QRTECH麦本本 小麦2QRTECH麦本本 小麦2QRTECH麦本本 小麦2 </a>
+      </span>
+      <span>228￥</span>
+      <span>有货</span>
+      <span class="remove_cls">删除</span>
+    </li>
+  </ul>
+</div>
+
+<div class="car_summary">
+  <ul class="c_ul">
+    <li class="u_desc">
+      <span>全选</span>
+      <span class="remove_cls">删除</span>
+      <span class="u_name">预计补贴 8 元  已选1件商品  合计(不含运费)： ￥1192.00</span>
+      <span class="btn-orange"><a class="btn-orange btn-all">结算</a></span>
+    </li>
+  </ul>
+
+</div>
+
+<div class="shop">
+  <h1>帮我买韩国城化妆品</h1>
+
+  <ul class="s_ul">
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/3.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a href="javascript:void(0);" class="add">加入购物车</a>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/4.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a href="javascript:void(0);" class="add">加入购物车</a>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/5.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a class="add" href="javascript:void(0);">加入购物车</a>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/6.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a class="add" href="javascript:void(0);">加入购物车</a>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/7.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a class="add" href="javascript:void(0);">加入购物车</a>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);">
+        <img src="images/8.jpg" alt="【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml" width="400" height="400">
+      </a>
+
+      <p>
+        <a target="_blank" href="http://detail.b5m.com/item.html?tid=2001914" class="a_title">【现货】too cool for school 鸡蛋EGG嫩滑保湿慕斯泡沫面膜 100ml</a>
+      </p>
+
+      <p>
+        <span class="b5m-price">￥238.00</span>
+        <span class="origin-price">¥158</span>
+      </p>
+      <a class="add">加入购物车</a>
+    </li>
+
+
+  </ul>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".s_ul").find(".add").click(function () {
+      var title = $(this).parent().find(".a_title").text();
+      var b5mPrice = $(this).parent().find(".b5m-price").text();
+      var originPrice = $(this).parent().find(".origin-price").text();
+      var imageSrc = $(this).parent().find("img").attr("src");
+      alert(title);
+      alert(b5mPrice);
+      alert(originPrice);
+      alert(imageSrc);
+    });
+  });
+</script>
+</body>
+</html>
