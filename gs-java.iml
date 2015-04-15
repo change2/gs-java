@@ -84,9 +84,6 @@
     <orderEntry type="library" exported="" name="Gradle: org.jboss:jandex:1.1.0.Final" level="project" />
     <orderEntry type="library" exported="" name="Gradle: cglib:cglib:2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: asm:asm:3.3.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax:javaee-api:7.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.sun.mail:javax.mail:1.5.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" exported="" name="Gradle: xml-resolver:xml-resolver:1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: javax.xml.stream:stax-api:1.0-2" level="project" />
@@ -141,6 +138,9 @@
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-core:4.0.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-expression:4.0.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aop:4.0.9.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javax:javaee-api:7.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" name="gs-java node_modules" level="project" />
   </component>
 </module>

@@ -258,7 +258,7 @@
 </div>
 <div class="car">
   <ul class="c_ul">
-    <li class="u_desc">
+    <li class="u_desc" id="shopBox">
       <span class="u_name">商品</span>
       <span>帮我买价格</span>
       <span>是否有货</span>
@@ -424,6 +424,10 @@
       alert(b5mPrice);
       alert(originPrice);
       alert(imageSrc);
+      var carArr = [];
+      var json = {};
+      json.title = title;
+      carArr.push(json);
     });
   });
 </script>
