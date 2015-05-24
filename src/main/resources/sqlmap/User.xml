@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.shclearing.database.mappers.User">
+    <resultMap type="User" id="userMap">
+        <id property="userId" column="userId"></id>
+        <id property="userName" column="username"/>
+        <id property="password" column="password"/>
+    </resultMap>
+    <insert id="addUser" parameterType="User">
+        insert into t_user(userid, username, password) VALUES (#{userId},#{userName},#{password})
+    </insert>
+    <delete id="deleteUser" parameterType="int">
+        DELETE from t_user where userid = #{userId}
+    </delete>
+    <update id="updateUser" parameterType="User">
+        update t_user set username=#{userName},password=#{password} where userid=#{userId}
+    </update>
+    <select id="selectUser" resultMap="userMap" parameterType="int" resultType="User">
+        select userId,userName,password from t_user where userid=#{userId}
+    </select>
+</mapper>

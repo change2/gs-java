@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>购物车</title>
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-ion">
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    a {
+      color: #333;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    body {
+      background: #f5f5f5;
+      font-size: 12px;
+      font-family: "微软雅黑", serif;
+      color: #666;
+    }
+
+    .top {
+      width: 100%;
+      height: 270px;
+      background: #921dff;
+      text-align: center;
+    }
+
+    body {
+      text-align: center
+    }
+  </style>
+</head>
+
+<body>
+<div class="top">
+  <img src="images/time.jpg" alt="双十一活动" width="990" height="270">
+</div>
+
+<div class="ucenter-main fr">
+  <div class="ucenter-title cf">
+    <strong class="l">帮我买订单</strong>
+
+
+  </div>
+
+  <div class="myorder-class" id="myorder-class">
+    <div class="order-clist">
+      <a class="order-cbox now" href="javascript:void(0);">所有订单 <i class="triangle"></i></a>
+      <a class="order-cbox" href="javascript:void(0);">待付款<em></em><i class="triangle"></i></a>
+      <a class="order-cbox" href="javascript:void(0);">待发货<em></em><i class="triangle"></i></a>
+      <a class="order-cbox" href="javascript:viod(0);">待收货<em>6</em><i class="triangle"></i></a>
+    </div>
+    <div class="order-filter">
+      <div class="order-search"><input type="text" class="search-text" placeholder="输入商品名称、订单编号、支付号" value="" autocomplete="off"><a class="search-btn" href="javascript:void(0)">查询</a></div>
+    </div>
+  </div>
+  <div class="myorder-list" id="myorder-list">
+    <table class="order-ltitle">
+      <colgroup>
+        <col width="249">
+        <col width="100">
+        <col width="90">
+        <col width="39">
+        <col width="115">
+        <col width="77">
+        <col width="92">
+      </colgroup>
+      <tbody>
+      <tr>
+        <th>订单信息</th>
+        <th>规格</th>
+        <th>单价（元）</th>
+        <th>数量</th>
+        <th>订单总额</th>
+        <th>交易状态</th>
+        <th>操作</th>
+      </tr>
+      </tbody>
+    </table>
+    <div class="order-list">
+      <table class="order-lbox">
+        <colgroup>
+          <col width="249">
+          <col width="100">
+          <col width="90">
+          <col width="39">
+          <col width="115">
+          <col width="77">
+          <col width="92">
+        </colgroup>
+        <thead>
+        <tr class="tr">
+          <th class="tx-left th"><strong class="order-time">2015-04-10</strong><strong class="order-number">支付号：6475063604257239727</strong></th>
+          <th class="th">--</th>
+          <th class="th">--</th>
+          <th class="th">6</th>
+          <th class="th"><strong class="order-th-price">1078.00</strong><i class="order-price-tip">(含运费：0.00)</i></th>
+          <th class="th" rel="200">--</th>
+          <th class="th">--</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="order-title tr">
+          <td class="tx-left tr-head td" colspan="7"><span class="goods-source">韩国城-self</span>订单编号：8575063696557293028</td>
+        </tr>
+        <tr class="tr">
+          <td class="tx-left td"><a class="order-img imgc" href="http://detail.b5m.com/item.html?tid=2001829" title="查看商品详情" target="_blank"><img class="imge" src="http://b5mtao.qiniudn.com/4ebf0bc574784f34a8b4ef06b0531800" alt=""><span class="iecp"></span></a><a class="order-name" href="http://detail.b5m.com/item.html?tid=2001829" title="" target="_blank"><span>【韩国城-self】</span>【现货】Banilaco/芭妮兰 致柔卸妆膏100ml</a></td>
+          <td class="td">化妆品含量:100ml</td>
+          <td class="td" title="115">115</td>
+          <td class="td">x1</td>
+          <td class="td"><strong class="order-price">115.00</strong></td>
+          <td class="order-status td" rel="300--300">已发货</td>
+          <td class="order-operate td" data-lbtr-ordernum="8575063696557293028_s1" data-lbtr-id="765733"><a href="http://order.b5m.com/dh/page/order/goods/detail/view.htm?orderNum=8575063696557293028_s1&amp;company=zhongtong&amp;number=728550025657" class="order-handle" target="_blank">订单详情</a><a href="http://order.b5m.com/dh/page/order/goods/logistics/view.htm?company=zhongtong&amp;number=728550025657&amp;orderNum=8575063696557293028_s1" class="order-handle" target="_blank">物流详情</a><a
+                  href="javascript:void(0);" class="order-handle confirm">确认收货</a><span class="order-handle lock order-tips">退款/退货<div class="order-pop"><i class="icon-arr"></i>如需申请退货，点击确认收货后即可进行，如有疑问请致电会员顾问 <strong>400-085-0505(09:30-22:00)</strong></div></span></td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="ui-loading" style="display: none;">正在加载...</div>
+    <div class="ui-empty-data" style="display: none;"><span>暂无订单信息</span></div>
+    <div class="page page-view"><a class="first dis" href="javascript:;" data-page="lock">首页</a><a class="prev dis" href="javascript:;" data-page="lock">&lt;</a><a class="cur" href="javascript:;" data-page="1">1</a><a class="next dis" href="javascript:;" data-page="lock">&gt;</a><a class="last dis" href="javascript:;" data-page="lock">尾页</a><span class="all">共1页&nbsp;&nbsp;去第</span><span class="page-input"><input type="text"><a href="javascript:;" id="goA">GO</a></span><span
+            class="go">页</span></div>
+
+
+  </div>
+
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+</body>
+</html>

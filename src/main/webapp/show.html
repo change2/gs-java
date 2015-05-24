@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+
+  <!-- setup code START -->
+  <style type="text/css">
+    img.progressBar {
+      background: #ffffff url(images/1.png) top left no-repeat;
+      padding: 0;
+      margin: 5px 0 5px 0;
+      background-position: 1px 0;
+    }
+  </style>
+
+  <script language="JavaScript" type="text/javascript">
+    function createProgressBar(elem) {
+      var img = document.createElement('IMG');
+      img.src = 'images/1.png';
+      img.className = 'progressBar';
+      img.style.backgroundPosition = '-120px 0';
+      img.alt = '0%';
+      elem.appendChild(img);
+
+      return {
+        img: img,
+        setValue: function (value) {
+          this.img.alt = value + '%';
+          this.img.style.backgroundPosition =
+                  ((121 * value) / 100 - 120) + 'px 0';
+        }
+      }
+    }
+  </script>
+  <!-- setup code END -->
+
+  <!-- test code START -->
+  <script language="JavaScript" type="text/javascript">
+    var value = 0;
+    var theBar;
+    function resetValue() {
+      value = 0;
+    }
+
+    function showProgress() {
+      value++;
+      theBar.setValue(value);
+      if (value < 100) {
+        window.setTimeout(showProgress, 100);
+      }
+    }
+  </script>
+</head>
+<body>
+<div id="progress-bar"></div>
+<button onclick="theBar=createProgressBar(document.getElementById('progress-bar'));">
+  Add Progress bar
+</button>
+&nbsp;
+<button onclick="resetValue();showProgress();">Show Progress</button>
+</body>
+</html>
