@@ -11,7 +11,11 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
+<<<<<<< HEAD
   <context:component-scan base-package="com.shclearing"/>
+=======
+  <context:component-scan base-package="com.shclearing.controller"/>
+>>>>>>> init
 
   <!-- support JSR303 annotation if JSR 303 validation present on classpath -->
   <mvc:annotation-driven/>
@@ -24,6 +28,7 @@
       <value>.jsp</value>
     </property>
   </bean>
+<<<<<<< HEAD
   <!--配置Freemarker -->
   <bean id="freemarkerConfigurer"
         class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
@@ -43,4 +48,10 @@
     <property name="contentType" value="text/html; charset=UTF-8" />
   </bean>
 
+=======
+
+  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basename" value="messages"/>
+  </bean>
+>>>>>>> init
 </beans>

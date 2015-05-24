@@ -14,7 +14,7 @@ public class SpringRmiServer {
 
 
   public static void main(String[] args) throws RemoteException {
-    ApplicationContext fxa = new ClassPathXmlApplicationContext("application-rmi.xml");
+    ApplicationContext fxa = new ClassPathXmlApplicationContext("rmi/application-rmi.xml");
     System.out.println("Server has been started!");
   }
 }

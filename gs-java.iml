@@ -143,7 +143,7 @@
     <orderEntry type="library" exported="" name="Gradle: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.freemarker:freemarker:2.3.22" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-context-support:4.0.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Python 2.7.9 (D:\local\Python27\python.exe) interpreter library" level="application" />
     <orderEntry type="library" name="gs-java node_modules" level="project" />
+    <orderEntry type="library" name="Python 2.7.9 (D:\local\Python27\python.exe) interpreter library" level="application" />
   </component>
 </module>

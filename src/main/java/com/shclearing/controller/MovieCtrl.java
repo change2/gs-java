@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/movie")
 public class MovieCtrl {
 
-  public MovieCtrl() {
-    System.out.println("=========================");
-  }
+
 
   @RequestMapping(value = "/{name}", method = RequestMethod.GET)
   public String getMovie(@PathVariable String name, ModelMap modelMap) {

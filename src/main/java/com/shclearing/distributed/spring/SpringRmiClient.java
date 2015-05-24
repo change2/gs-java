@@ -15,7 +15,7 @@ public class SpringRmiClient {
 
 
   public static void main(String[] args) throws Exception {
-    ClassPathXmlApplicationContext cax = new ClassPathXmlApplicationContext("application-rmiclient.xml");
+    ClassPathXmlApplicationContext cax = new ClassPathXmlApplicationContext("rmi/application-rmiclient.xml");
     final BusinessService businessService = (BusinessService) cax.getBean("businessService");
     for (int i = 0; i < 1000; i++) {
       long start = System.currentTimeMillis();

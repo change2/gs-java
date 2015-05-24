@@ -1,6 +1,7 @@
 package com.shclearing.j2eerest;
 
-import com.shclearing.model.Person;
+
+import com.shclearing.database.model.Person;
 import com.shclearing.page.PaginatedListWrapper;
 
 import javax.ejb.Stateless;

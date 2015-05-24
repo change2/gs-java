@@ -4,3 +4,9 @@ build/
 .idea
 *.iml
 gs-java.iml
+build/*
+.idea/*
+.gradle/*
+gradle
+out/*
+.iml

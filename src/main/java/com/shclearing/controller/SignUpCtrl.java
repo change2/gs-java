@@ -1,6 +1,6 @@
 package com.shclearing.controller;
 
-import com.shclearing.model.Customer;
+import com.shclearing.database.model.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;

@@ -22,7 +22,6 @@ public class CommonTemplate extends HttpServlet {
   private static final Logger LOGGER = LoggerFactory.getLogger(CommonTemplate.class);
 
   public CommonTemplate() {
-    System.out.println("=========================");
   }
 
   @Override
