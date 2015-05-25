@@ -7,6 +7,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <import resource="mybatis-spring.xml"/>
+    <import resource="jms-config.xml"/>
     <mvc:annotation-driven />
 
     <context:component-scan base-package="com.shclearing"/>
@@ -50,25 +52,6 @@
         <property name="testWhileIdle">
             <value>true</value>
         </property>
-    </bean>
-
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:conf/mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath:sqlmap/*.xml"/>
-    </bean>
-
-    <bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory" />
-    </bean>
-
-    <bean id="transactionManager"
-          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
-    </bean>
-
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.shclearing.database.mappers" />
     </bean>
 
     <bean id="idService" class="com.etonenet.uuid.impl.DecimalIdImpl" init-method="init"/>
