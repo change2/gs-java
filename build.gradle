@@ -17,6 +17,7 @@ dependencies {
   compile 'org.springframework:spring-web:4.0.6.RELEASE'
   compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
   compile 'org.springframework:spring-context:4.0.6.RELEASE'
+  compile 'org.springframework:spring-context-support:4.0.6.RELEASE'
   compile 'org.springframework:spring-core:4.0.6.RELEASE'
   compile 'cglib:cglib:2.2.2'
   providedCompile "javax:javaee-api:7.0"
@@ -35,6 +36,8 @@ dependencies {
   compile 'org.hibernate:hibernate-entitymanager:4.3.7.Final'
   compile 'org.mongodb:mongo-java-driver:2.13.0'
   compile 'org.springframework.data:spring-data-mongodb:1.6.2.RELEASE'
+  compile 'org.freemarker:freemarker:2.3.22'
+
 
 
 }
