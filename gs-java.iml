@@ -40,8 +40,8 @@
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/groovy" />
           <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/groovy" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
       </configuration>
@@ -141,7 +141,9 @@
     <orderEntry type="library" exported="" name="Gradle: javax:javaee-api:7.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.sun.mail:javax.mail:1.5.0" level="project" />
-    <orderEntry type="library" name="gs-java node_modules" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.freemarker:freemarker:2.3.22" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-context-support:4.0.6.RELEASE" level="project" />
     <orderEntry type="library" name="Python 2.7.9 (D:\local\Python27\python.exe) interpreter library" level="application" />
+    <orderEntry type="library" name="gs-java node_modules" level="project" />
   </component>
 </module>
