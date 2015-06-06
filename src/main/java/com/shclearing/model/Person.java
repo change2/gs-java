@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
 
 
 /**
@@ -16,6 +17,7 @@ public class Person {
   @Id
   private Long id;
 
+  @Pattern(regexp = "[A-Za-z0-9]{5,20}", message = "{username.illegal}")
   @NotEmpty
   private String name;
 
