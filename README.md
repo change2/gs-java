@@ -22,7 +22,6 @@ node cli.js install npm -gf
 npm install -d
 
 
-=======
 http://www.ibm.com/developerworks/cloud/library/cl-poseidon3-app/index.html?ca=drs-
 
 

@@ -3,6 +3,8 @@ package com.shclearing.config;
 import com.etonenet.uuid.IdService;
 import com.shclearing.database.mappers.User;
 import com.shclearing.database.serivce.UserDAO;
+import com.shclearing.database.serivce.UserDAO;
+import com.shclearing.database.mappers.User;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,8 +14,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Time: 19:56
  */
 public class SpringInit {
-
-
 
     static UserDAO userDAO ;
     static IdService idService;
